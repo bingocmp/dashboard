@@ -1155,9 +1155,9 @@ export class GenCreateData {
       hostname: this.fd.hostName,
     }
     // 非预付费资源池不会添加sku
-    if (!this.isPrepaid) {
-      data.sku = this.fd.sku.name
-    }
+    // if (!this.isPrepaid) {
+    data.sku = this.fd.sku.name
+    // }
     // 弹性IP
     if (this.isPublic || this.isIDC) {
       if (this.fd.eip_type === EIP_TYPES_MAP.new.key || this.fd.eip_type === EIP_TYPES_MAP.public.key) {

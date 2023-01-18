@@ -378,7 +378,7 @@ const getSingleActions = function () {
                     validate: false,
                     tooltip: null,
                   }
-                  if (obj.hypervisor !== typeClouds.hypervisorMap.esxi.key) {
+                  if (obj.hypervisor !== typeClouds.hypervisorMap.esxi.key && obj.hypervisor !== typeClouds.hypervisorMap.bingocloud.key) {
                     ret.tooltip = i18n.t('compute.text_473', [PROVIDER_MAP[provider].label])
                     return ret
                   }
@@ -408,7 +408,9 @@ const getSingleActions = function () {
                     validate: false,
                     tooltip: null,
                   }
-                  if (obj.hypervisor !== typeClouds.hypervisorMap.esxi.key && obj.hypervisor !== typeClouds.hypervisorMap.kvm.key) {
+                  if (obj.hypervisor !== typeClouds.hypervisorMap.esxi.key &&
+                    obj.hypervisor !== typeClouds.hypervisorMap.kvm.key &&
+                    obj.hypervisor !== typeClouds.hypervisorMap.bingocloud.key) {
                     ret.tooltip = i18n.t('compute.text_473', [PROVIDER_MAP[provider].label])
                     return ret
                   }
@@ -438,7 +440,8 @@ const getSingleActions = function () {
                     validate: false,
                     tooltip: null,
                   }
-                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key) {
+                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key &&
+                    obj.hypervisor !== typeClouds.hypervisorMap.bingocloud.key) {
                     ret.tooltip = i18n.t('compute.text_473', [PROVIDER_MAP[provider].label])
                     return ret
                   }
@@ -779,7 +782,8 @@ const getSingleActions = function () {
                     validate: false,
                     tooltip: null,
                   }
-                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key) {
+                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key &&
+                    obj.hypervisor !== typeClouds.hypervisorMap.bingocloud.key) {
                     ret.tooltip = i18n.t('compute.text_473', [PROVIDER_MAP[provider].label])
                     return ret
                   }
@@ -808,7 +812,8 @@ const getSingleActions = function () {
                   const ret = {
                     validate: true,
                   }
-                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key) {
+                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key &&
+                    obj.hypervisor !== typeClouds.hypervisorMap.bingocloud.key) {
                     ret.validate = false
                     ret.tooltip = i18n.t('compute.text_473', [PROVIDER_MAP[provider].label])
                     return ret
@@ -837,7 +842,8 @@ const getSingleActions = function () {
                     validate: false,
                     tooltip: null,
                   }
-                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key) {
+                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key &&
+                    obj.hypervisor !== typeClouds.hypervisorMap.bingocloud.key) {
                     ret.tooltip = i18n.t('compute.text_473', [PROVIDER_MAP[obj.provider].label])
                     return ret
                   }
@@ -869,10 +875,10 @@ const getSingleActions = function () {
                     ret.tooltip = i18n.t('compute.text_285')
                     return ret
                   }
-                  if (obj.hypervisor === typeClouds.hypervisorMap.bingocloud.key) {
-                    ret.tooltip = i18n.t('compute.text_473', [typeClouds.hypervisorMap.bingocloud.label])
-                    return ret
-                  }
+                  // if (obj.hypervisor === typeClouds.hypervisorMap.bingocloud.key) {
+                  //   ret.tooltip = i18n.t('compute.text_473', [typeClouds.hypervisorMap.bingocloud.label])
+                  //   return ret
+                  // }
                   ret.validate = true
                   return ret
                 },
@@ -897,7 +903,8 @@ const getSingleActions = function () {
                     validate: false,
                     tooltip: null,
                   }
-                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key) {
+                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key &&
+                    obj.hypervisor !== typeClouds.hypervisorMap.bingocloud.key) {
                     ret.tooltip = i18n.t('compute.text_473', [PROVIDER_MAP[provider].label])
                     return ret
                   }
@@ -932,7 +939,8 @@ const getSingleActions = function () {
                     validate: false,
                     tooltip: null,
                   }
-                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key) {
+                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key &&
+                    obj.hypervisor !== typeClouds.hypervisorMap.bingocloud.key) {
                     ret.tooltip = i18n.t('compute.text_473', [PROVIDER_MAP[provider].label])
                     return ret
                   }
@@ -1435,7 +1443,8 @@ const getSingleActions = function () {
                 meta: () => {
                   const provider = obj.provider
                   const ret = { validate: true, tooltip: null }
-                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key) {
+                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key &&
+                    obj.hypervisor !== typeClouds.hypervisorMap.bingocloud.key) {
                     ret.validate = false
                     ret.tooltip = i18n.t('compute.text_473', [PROVIDER_MAP[provider].label])
                     return ret
@@ -1470,7 +1479,8 @@ const getSingleActions = function () {
                     validate: false,
                     tooltip: null,
                   }
-                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key) {
+                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key &&
+                    obj.hypervisor !== typeClouds.hypervisorMap.bingocloud.key) {
                     ret.tooltip = i18n.t('compute.text_473', [PROVIDER_MAP[provider].label])
                     return ret
                   }
@@ -1511,7 +1521,8 @@ const getSingleActions = function () {
                     ret.tooltip = i18n.t('compute.text_1383')
                     return ret
                   }
-                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key) {
+                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key &&
+                    obj.hypervisor !== typeClouds.hypervisorMap.bingocloud.key) {
                     ret.tooltip = i18n.t('compute.text_473', [PROVIDER_MAP[provider].label])
                     return ret
                   }
@@ -1557,6 +1568,7 @@ const getSingleActions = function () {
                   }
                   if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key &&
                     obj.hypervisor !== typeClouds.hypervisorMap.esxi.key &&
+                    obj.hypervisor !== typeClouds.hypervisorMap.bingocloud.key &&
                     obj.hypervisor !== typeClouds.hypervisorMap.openstack.key) {
                     ret.tooltip = i18n.t('compute.text_473', [PROVIDER_MAP[provider].label])
                     return ret
@@ -1581,7 +1593,8 @@ const getSingleActions = function () {
                     validate: true,
                     tooltip: '',
                   }
-                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key) {
+                  if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key &&
+                    obj.hypervisor !== typeClouds.hypervisorMap.bingocloud.key) {
                     ret.validate = false
                     ret.tooltip = i18n.t('compute.text_473', [PROVIDER_MAP[obj.provider].label])
                     return ret
@@ -1611,11 +1624,11 @@ const getSingleActions = function () {
                 name: i18n.t('dictionary.server'),
                 meta: () => {
                   const ret = { validate: true }
-                  if (obj.hypervisor === typeClouds.hypervisorMap.bingocloud.key) {
-                    ret.tooltip = i18n.t('compute.text_473', [typeClouds.hypervisorMap.bingocloud.label])
-                    ret.validate = false
-                    return ret
-                  }
+                  // if (obj.hypervisor === typeClouds.hypervisorMap.bingocloud.key) {
+                  //   ret.tooltip = i18n.t('compute.text_473', [typeClouds.hypervisorMap.bingocloud.label])
+                  //   ret.validate = false
+                  //   return ret
+                  // }
                   return ret
                 },
                 hidden: () => this.$isScopedPolicyMenuHidden('vminstance_hidden_menus.server_set_delete_protection'),
@@ -1639,10 +1652,10 @@ const getSingleActions = function () {
                 },
                 meta: () => {
                   const ret = { validate: false }
-                  if (obj.hypervisor === typeClouds.hypervisorMap.bingocloud.key) {
-                    ret.tooltip = i18n.t('compute.text_473', [typeClouds.hypervisorMap.bingocloud.label])
-                    return ret
-                  }
+                  // if (obj.hypervisor === typeClouds.hypervisorMap.bingocloud.key) {
+                  //   ret.tooltip = i18n.t('compute.text_473', [typeClouds.hypervisorMap.bingocloud.label])
+                  //   return ret
+                  // }
                   const { server_delete_limit = false } = this.$store.getters.globalSetting.value || {}
                   if (server_delete_limit && obj.status === 'running') {
                     ret.tooltip = i18n.t('compute.delete_limit')

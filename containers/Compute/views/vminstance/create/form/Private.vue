@@ -266,7 +266,7 @@ export default {
       if (zone) {
         return {
           enabled: 1,
-          usable: true,
+          usable: false,
           zone,
           hypervisor: this.form.fd.hypervisor,
         }

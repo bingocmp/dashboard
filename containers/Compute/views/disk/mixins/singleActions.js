@@ -179,12 +179,12 @@ export default {
                 }
                 return ret
               },
-              extraMeta: obj => {
-                return getDisabledProvidersActionMeta({
-                  row: obj,
-                  disabledProviders: ['BingoCloud'],
-                })
-              },
+              // extraMeta: obj => {
+              //   return getDisabledProvidersActionMeta({
+              //     row: obj,
+              //     disabledProviders: ['BingoCloud'],
+              //   })
+              // },
               hidden: () => this.$isScopedPolicyMenuHidden('disk_hidden_menus.disk_perform_create_snapshot'),
             },
             {

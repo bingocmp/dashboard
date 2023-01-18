@@ -710,7 +710,8 @@ export default {
                         tooltip: null,
                       }
                       for (const obj of this.list.selectedItems) {
-                        if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key) {
+                        if (obj.hypervisor !== typeClouds.hypervisorMap.kvm.key &&
+                          obj.hypervisor !== typeClouds.hypervisorMap.bingocloud.key) {
                           ret.validate = false
                           ret.tooltip = this.$t('compute.text_355')
                           break
@@ -1232,7 +1233,7 @@ export default {
       // 新建按钮无法点击时，刷新云资源情况
       this.cloudEnvEmpty && this.$store.dispatch('auth/getCapabilities')
     },
-    hasSomeCloud (selectItems, clouds = [typeClouds.hypervisorMap.bingocloud.key]) {
+    hasSomeCloud (selectItems, clouds = []) {
       const ret = { validate: true, tooltip: '' }
       const hasList = selectItems.filter(item => clouds.includes(item.hypervisor))
       if (hasList && hasList[0]) {
